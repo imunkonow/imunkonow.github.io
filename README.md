@@ -1,7 +1,8 @@
 # imunkonow.github.io
 https://imunkonow.github.io/
 
+## Webアプリリンク集用Webサイト
 
 CMSを使用しないWebサイト製作
 
-JavaScriptをマスターしてから取り掛かります。
+ポートフォリオ兼、フロントエンド学習
