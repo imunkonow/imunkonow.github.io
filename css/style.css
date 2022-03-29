@@ -1,0 +1,141 @@
+@import url(sanitize.css);
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+body {
+    background-color: #f0f0f0;
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.container {
+    max-width: 800px;
+    max-height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    margin: 0 auto;
+}
+
+header {
+    background-color: #422814;
+    padding: 10px;
+    color: #fff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    font-family: 'Sriracha', cursive;
+}
+
+.description {
+    clear: left;  
+    /* 周り込みの解除 */
+}
+
+.description img {
+    float: left;
+    /* 画像を左に周りこませる(後の要素を右に) */
+    margin: 0 10px 10px 0;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    width: 100px;
+    height: 100px;
+}
+
+/* 疑似クラス マウスを乗せたときの処理 */
+.description img:hover {
+    opacity: .5;
+}
+
+.information h1 {
+    font-size: 18px;
+    margin: 0 10px 10px 0;
+    float: left;
+    /* 左に周りこませる(後の要素を右に) */
+}
+
+.information .type {
+    display: inline;
+    background-color: #E35A4D;
+    padding: 3px 5px;
+    font-size: 80%;
+    color: #fff;
+}
+
+.content {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.songs {
+    margin: 0 0 20px;
+}
+
+.songs h2 {
+    clear: left;
+    font-size: 100%;
+    font-weight: normal;
+    margin: 0;
+    background-color: #E6E4DD;
+    padding: 5px 10px;
+}
+
+.songs ol {
+    padding: 0;
+    margin: 0;
+    list-style: decimal inside;
+    /* はみ出ないようにする(divないに収める) */
+}
+.songs li {
+    border-bottom: 1px solid #ccc;
+    /* 下線 */
+    width: 50%;
+    float: left;
+    /* 周りこみ */
+    padding: 5px 10px;
+}
+
+.clearfix:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+/* リスト崩れの回避 */
+
+a {
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    font-size: 80%;
+}
+
+/* スマートフォン用(条件) */
+@media only screen and (max-width: 600px) {
+    .description img {
+        float: none;
+        /* 画像を中央にするために解除 */
+        display: block;
+        margin: 0 auto;
+        /* display: block でmarginを有効にする */
+    }
+
+    header {
+        padding: 5px;
+    }
+    header h1 {
+        font-size: 12px;
+    }
+    .description h1 {
+        font-size: 14px;
+    }
+    .songs li {
+        float: none;
+        width: inherit;
+    }
+}
