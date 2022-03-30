@@ -1,5 +1,5 @@
 # imunkonow.github.io
-https://imunkonow.github.io/index.html
+https://imunkonow.github.io/
 
 ## Webアプリリンク集用Webサイト
 
