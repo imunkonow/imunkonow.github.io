@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style2.css">
+    <title>アンケート</title>
+</head>
+<body>
+    <div class="container"><!-- レスポンシブにする https://getbootstrap.jp/docs/5.0/layout/containers/ -->
+        <header>
+            <div class="row"><!-- カラムにする(12列にわける) https://getbootstrap.jp/docs/5.0/layout/gutters/#row-columns-gutters -->
+                             <!-- テキストの寄せ https://getbootstrap.jp/docs/5.0/utilities/text/#text-alignment -->
+                <div class="col-sm-6"><!-- カラム1~6(左側) 中央まで style="text-align; right" -> class="text-end" でテキストを寄せる -->
+                    <h1>アンケート</h1>
+                </div>
+                <div class="col-sm-6"><!-- カラム7~12(右側) 中央まで style="text-align; right" -> class="text-end" でテキストを寄せる -->
+                    <a href="/">HOMEへ戻る</a>
+                    </div>
+                </div>
+        </header>
+    </div>
+
+        <hr><!-- 横線 containerから外すことで画面いっぱい -->
+
+        <div class="container">
+            <form action="" method="post" class="row">
+                <div class="col-sm-8 offset-sm-2"><!-- offset でカラムを埋める、12-10=2の残りの2は自動 -->
+                    <p><span class="badge rounded-pill bg-warning text-dark">※フロント部分しか作成していないため、実際には送信されません。</span><br>ご利用いただきありがとうございます。<br>よろしければアンケートにご回答いただけますと幸いです。</p>
+                    
+                    <div class="form-group">
+                        <label for="name">お名前 <span class="badge badge-danger">必須</badge-danger></label><!-- forで紐づけ for-id 必須などのバッジ https://getbootstrap.jp/docs/5.0/components/badge/-->
+                        <input type="text" id="name" name="name" class="form-control" placeholder="例) 山田 太郎" required><!-- forとid nameはバックエンドの紐づけ 入力系はform-control required で入力必須 -->
+                    </div>
+                        <div class="form-group">
+                        <label for="job">ご職業</label>
+                        <select name="job" id="job" class="form-control"><!-- ドロップダウンリスト (size="5"常に5個分の大きさ表示 multiple複数選択)複数ならチェックボックス推奨-->
+                            <option value="">選択してください</option>
+                            <option value="会社員">会社員</option>
+                            <option value="学生">学生</option>
+                            <option value="その他">その他</option>
+                            <!-- valueの内容はバックエンドに合わせる -->
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6"><!-- チェックボックス https://getbootstrap.jp/docs/5.0/components/button-group/#checkbox-and-radio-button-groups -->
+                            <label for="">よかった点(複数可)</label>
+                            <div class="form-check">
+                                <input type="checkbox" name="q1" id="q1_1" value="html" class="form-check-input">
+                                <label for="q1_1" class="form-cheak-label">内容</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" name="q2" id="q1_2" value="html" class="form-check-input">
+                                <label for="q1_2" class="form-cheak-label">コード</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" name="q3" id="q1_3" value="html" class="form-check-input">
+                                <label for="q1_3" class="form-cheak-label">アクセシビリティ</label>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6"><!-- チェックボックス https://getbootstrap.jp/docs/5.0/components/button-group/#checkbox-and-radio-button-groups -->
+                            <label for="">足りない点(複数可)</label>
+                            <div class="form-check">
+                                <input type="checkbox" name="qq1" id="q2_1" value="html" class="form-check-input">
+                                <label for="q2_1" class="form-cheak-label">内容</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" name="qq2" id="q2_2" value="html" class="form-check-input">
+                                <label for="q2_2" class="form-cheak-label">コード</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" name="qq3" id="q2_3" value="html" class="form-check-input">
+                                <label for="q2_3" class="form-cheak-label">アクセシビリティ</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group"><!-- ラジオ  https://getbootstrap.jp/docs/5.0/forms/checks-radios/ -->
+                        <label for="" class="d-block">総合的な評価</label><!-- display-blockでinlineからblockにする -->
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="q3" id="q3_1" value="1">
+                            <label for="q3_1" class="form-check-label">内定</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="q3" id="q3_2" value="2">
+                            <label for="q3_2" class="form-check-label">とてもよかった</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="q3" id="q3_3" value="3">
+                            <label for="q3_3" class="form-check-label">よかった</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="q3" id="q3_4" value="4">
+                            <label for="q3_4" class="form-check-label">改善の余地あり</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="q3" id="q3_5" value="5">
+                            <label for="q3_5" class="form-check-label">お祈り</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="q3" id="q3_6" value="">
+                            <label for="q3_6" class="form-check-label">回答なし</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">ご意見</label>
+                        <textarea name="message" id="m,essage" rows="10" class="form-control"></textarea><!-- 入力系はform-control -->
+                    </div>
+                    <button type="submit" class="btn btn-primary">送信する</button><!-- ボタン https://getbootstrap.jp/docs/5.0/components/buttons/ -->
+                </div>
+            </form>
+        </div>
+
+        <hr><!-- 横線 containerから外すことで画面いっぱい -->
+
+    <div class="container"><!-- https://getbootstrap.jp/docs/5.0/layout/containers/ -->
+        <footer>
+            <p>&copy;imunkonow</p>
+        </footer>
+    </div>
+</body>
+</html>
