@@ -19,6 +19,20 @@
 </head>
 <body>
     <div class="container">
+        <header>
+            <div class="row"><!-- カラムにする(12列にわける) https://getbootstrap.jp/docs/5.0/layout/gutters/#row-columns-gutters -->
+                             <!-- テキストの寄せ https://getbootstrap.jp/docs/5.0/utilities/text/#text-alignment -->
+                <div class="col-sm-6"><!-- カラム1~6(左側) 中央まで style="text-align; right" -> class="text-end" でテキストを寄せる -->
+                    <h1>JavaScriptで作成したストップウォッチ</h1>
+                </div>
+                <div class="col-sm-6"><!-- カラム7~12(右側) 中央まで style="text-align; right" -> class="text-end" でテキストを寄せる -->
+                    <a href="/">HOMEへ戻る</a>
+                    </div>
+                </div>
+        </header>
+    </div>
+    <div class="container">
+        <hr><!-- 横線 containerから外すことで画面いっぱい -->
         <!-- <script>
             document.write('<p id="timer">00:00:00</p>')
         </script> -->
