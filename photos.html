@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style4.css">
+
+    <title>My Photos</title>
+</head>
+<body>
+    <header>
+        <h1>My Photos</h1>
+        <p style="margin: 0; padding: 0; text-align: right;"><a href="/" style=" color: white;">HOMEへ戻る</a></p>
+    </header>
+
+    <div class="container">
+        <div id="img_unit">
+            <!-- <div class="photo">
+                <img src="img/img01.jpg" alt="">
+                <div class="inner"><p>コメント1 <span>nickname</span></p></div>
+            </div>
+            <div class="photo">
+                <img src="img/img02.jpg" alt="">
+                <div class="inner"><p>コメント2 <span>nickname2</span></p></div>
+            </div> -->
+
+            <!-- 複数行にわたるのでjavascriptにまとめて記述 -->
+        </div>
+    </div>
+
+    <script>
+        // JSONデータ
+        var images = [
+            {
+                "path": "img/img01.jpg",
+                "name": "昔の自作PC完成系",
+                "caption": "Ryzen7 2700x + RTX570"
+            },
+            {
+                "path": "img/img02.jpg",
+                "name": "昔の自作PC動作確認",
+                "caption": "組み立て中のPC"
+            },
+            {
+                "path": "img/img03.gif",
+                "name": "現在の自作PC",
+                "caption": "Ryzen5 3600x + gtx1060"
+            },
+        ];
+
+        // alert(images[0].caption);  // コメント1というアラート
+        // alert(images[0].name);  // name01というアラート
+        // alert(images[0].path);  // img/img01.jpgというアラート
+
+        // alert(images[1].caption);  // コメント2というアラート
+        // alert(images[1].name);  // name02というアラート
+        // alert(images[1].path);  // img/img02.jpgというアラート
+
+        // var pref = ['北海道', '青森県', '岩手県'];  // new Arrayも使えはする
+        // alert(pref[0]);  // 北海道
+        // alert(pref[1]);  // 青森県
+        // alert(pref[2]);  // 岩手県
+
+
+        // HTML要素にJavaScriptを使って追加
+        // [.innerHTML] or [.createElement + .appendChild]
+        var img;
+        var caption;
+        var div;
+
+        for(var i=0; i<images.length; i++){
+
+            img = document.createElement('img');  // img要素の作成
+            img.setAttribute('src', images[i].path) // src属性の指定 srcにimages[0].path=img/img01.jpgを指定
+            // 上記でできたもの <img src='img/img01.jpg'>
+
+            caption;
+            caption = document.createElement('div');  // divタグの生成
+            caption.className = 'inner';
+            caption.innerHTML = '<p>' + images[i].caption + '<span>' + images[i].name + '</span></p>';
+            // 上記でできたもの <div class="inner"><p>caption<span>name</span></div>
+
+            div = document.createElement('div');
+            div.className = 'photo';
+            // <div class="photo"></div>
+            div.appendChild(img);  // divにimgを子要素として追加
+            // <div class="photo">
+            //      <img src='img/img01.jpg'>
+            // </div>
+            div.appendChild(caption);  // divにcaptionを子要素として追加
+            // <div class="photo">
+            //      <img src='img/img01.jpg'>
+            //      <div class="inner"><p>caption<span>name</span></div>
+            // </div>
+
+                
+            document.getElementById('img_unit').appendChild(div);  // 指定した要素に子要素の追加
+        }
+    </script>
+</body>
+</html>

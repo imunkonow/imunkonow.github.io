@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(26, 55, 229, 0.06);
+}
+/* リセット */
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 3px rbga(0, 0, 0, .3);
+}
+/* 全体の大きさを設定 */
+
+img {
+    width: 100%;
+    margin: 0;
+    vertical-align: top;
+}
+/* 写真の幅を.containerに合わせる */
+
+header {
+    background-color: #007acc;
+    color: #fff;
+    width: 100%;
+    /* トップの固定 */
+    position: fixed;
+    top: 0;
+    /* 被らないように前面(重なりの一番上 */
+    z-index: 100;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 25px;
+    padding: 0;
+    text-align: center;
+    font-family: '';
+
+    /* htmlで設定したWebフォント */
+    font-family: 'Open Sans', sans-serif;
+}
+
+.photo {
+    /* position: absolute のために必要 ないと全体になる */
+    position: relative;
+}
+
+.photo .inner {
+    /* 絶対配置 position: relative でその要素で絶対配置を行う*/
+    position: absolute;
+    /* 画像の下に文字を重ねる */
+    bottom: 0;
+    /* 文字を右に移動 */
+    /* right: 0; */
+
+    /* 半透明の帯の上に白い文字を乗せる */
+    background-color: rgba(0, 0, 0, .5);
+    font-size: 10px;
+    color: #fff;
+    margin: 0;
+    /* 帯を画像に合わせる */
+    width: 100%;
+}
+.inner p{
+    /* 余白 */
+    padding: 20px;
+}
+.inner span{
+    /* 間隔をあける */
+    margin-left: 10px;
+}
