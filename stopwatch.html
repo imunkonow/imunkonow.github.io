@@ -82,14 +82,14 @@
                 start = start.getTime();
             }
             
-            if (reset === true){
+            if (reset){
                 start = new Date();
                 start = start.getTime();
                 reset = false;
             }
 
             if (this.innerHTML === 'START'){
-                if(stop === true){
+                if(stop){
                     restart = new Date();
                     restart = restart.getTime();
                     start += (restart - memory);
@@ -124,13 +124,16 @@
         });
 
         document.getElementById('lap').addEventListener('click',function(){
-            document.getElementById('record').innerHTML += ('<p>'+ hours + '時' + minutes +'分' + seconds + '秒' + milli + 'ミリ' + '</p>')
+            if(reset){
+                document.getElementById('record').innerHTML += ('<p>'+ '00時00分00秒000ミリ' + '</p>')
+            }else{
+                document.getElementById('record').innerHTML += ('<p>'+ hours + '時' + minutes +'分' + seconds + '秒' + milli + 'ミリ' + '</p>')
+            }
         });
 
         document.getElementById('clear').addEventListener('click',function(){
             document.getElementById('record').innerHTML = ('<p></p>')
         });
-
 
         var goTimer = function(){
             var now= new Date();
