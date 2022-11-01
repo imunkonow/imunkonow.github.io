@@ -1,0 +1,411 @@
+/* 基本の要素 */
+/* header固定 */
+header {
+  text-align: center;
+  border: solid 1px;
+
+  background-color: #333;
+
+  /* 固定 */
+  position: fixed;
+  width: 100%; /*追加*/
+  z-index: 2;
+  /* 固定 */
+}
+
+body {
+  color: #fff;
+}
+
+/* header以外のbody */
+.main {
+  /* 固定でずれる分を修正 */
+  padding-top: 100px; /* ヘッダーと同じ高さ */
+  z-index: 1;
+}
+
+main {
+  /* 固定でずれる分を修正 */
+  padding-top: 100px; /* ヘッダーと同じ高さ */
+  z-index: 1;
+  color: #000;
+}
+
+footer {
+  text-align: center;
+  border: solid 1px;
+
+  background-color: #333;
+}
+
+/* ここまで基本の要素 */
+
+/*  */
+
+/* 画像真ん中 & 拡大縮小フィット*/
+div.img {
+  text-align: center;
+  margin: 0 auto;
+  /* 
+        marginは無くてもよい
+        ブロック要素のセンタリング
+     */
+  border: solid 1px;
+  background-color: rgba(53, 43, 199, 0.63);
+}
+.img1 {
+  border: solid 1px;
+  /* 
+        画像の枠線
+    */
+  /* 画像をboxにフィットさせるように拡大縮小 */
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  /* 画像をboxにフィットさせるように拡大縮小 */
+}
+
+/* 複数カラム height, bgcolorは不要 */
+
+/* 2カラム */
+
+div.main2c {
+  display: flex;
+  /* 
+        要素を横に 
+    */
+  border: solid 1px;
+  background-color: rgba(62, 199, 43, 0.63);
+}
+.contents2c1,
+.contents2c2 {
+  width: 50%;
+  height: 10%;
+  border: solid 1px;
+}
+
+div.header2c {
+  display: flex;
+  /* 
+        要素を横に 
+    */
+  border: solid 1px;
+}
+.header2c1,
+.header2c2 {
+  width: 50%;
+  height: 10%;
+  border: solid 1px;
+}
+
+/* 3カラム */
+
+div.main3c {
+  display: flex;
+  /* 
+        要素を横に 
+    */
+  border: solid 1px;
+  background-color: rgba(62, 199, 43, 0.63);
+}
+.contents3c1,
+.contents3c2,
+.contents3c3 {
+  width: 50%;
+  height: 10%;
+  border: solid 1px;
+}
+
+div.header3c {
+  display: flex;
+  /* 
+        要素を横に 
+    */
+  border: solid 1px;
+}
+.header3c1,
+.header3c2,
+.header3c3 {
+  width: 50%;
+  height: 10%;
+  border: solid 1px;
+}
+
+/* 1カラム */
+
+div.main1c {
+  border: solid 1px;
+  background-color: rgba(72, 43, 199, 0.63);
+}
+.contents1c1 {
+  height: 10%;
+  border: solid 1px;
+}
+
+/* 2カラム 2:8 */
+
+div.main2 {
+  display: flex;
+  /* 
+        要素を横に 
+    */
+  border: solid 1px;
+  background-color: rgba(62, 199, 43, 0.63);
+}
+.contents2c1c28 {
+  width: 20%;
+  height: 10%;
+  border: solid 1px;
+}
+.contents2c2c28 {
+  width: 80%;
+  height: 10%;
+  border: solid 1px;
+}
+
+/* 2カラム 3:7 */
+
+div.main2 {
+  display: flex;
+  /* 
+        要素を横に 
+    */
+  border: solid 1px;
+  background-color: rgba(62, 199, 43, 0.63);
+}
+.contents2c1c37 {
+  width: 30%;
+  height: 10%;
+  border: solid 1px;
+}
+.contents2c2c37 {
+  width: 70%;
+  height: 10%;
+  border: solid 1px;
+}
+
+/* 3カラム 1:2:1*/
+
+div.main3c {
+  display: flex;
+  /* 
+        要素を横に 
+    */
+  border: solid 1px;
+  background-color: rgba(62, 199, 43, 0.63);
+}
+.contents3c1c121 {
+  width: 25%;
+  height: 10%;
+  border: solid 1px;
+}
+.contents3c2c121 {
+  width: 50%;
+  height: 10%;
+  border: solid 1px;
+}
+.contents3c3c121 {
+  width: 25%;
+  height: 10%;
+  border: solid 1px;
+}
+
+/* カラムここまで */
+
+/* 2カラム 3:7 input */
+
+/* input */
+div.input {
+  display: flex;
+  /* 
+        要素を横に 
+    */
+  border: solid 1px;
+  background-color: rgba(62, 199, 43, 0.63);
+}
+.contents1 {
+  width: 30%;
+  border: solid 1px;
+  background-color: #999;
+}
+.contents2 {
+  width: 70%;
+  border: solid 1px;
+}
+.contents31 {
+  border: solid 1px;
+  background-color: #555;
+}
+.contents32 {
+  border: solid 1px;
+  background-color: #fff;
+  color: #333;
+}
+/* input */
+
+/*  */
+
+/*ポップアップここから*/
+/* https://junichi-manga.com/popup-window-copipe/ */
+.popup_wrap input {
+  display: none;
+}
+
+.popup_overlay {
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.5s, transform 0s 0.5s;
+  transform: scale(0);
+}
+
+.popup_trigger {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.popup_content {
+  position: relative;
+  align-self: center;
+  width: 90%;
+  max-width: 800px;
+  padding: 30px 30px 15px;
+  box-sizing: border-box;
+  background: #fff;
+  line-height: 1.4em;
+  transition: 0.5s;
+}
+
+.close_btn {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.popup_wrap input:checked ~ .popup_overlay {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.5s;
+}
+
+.open_btn {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 30px;
+  margin: 10px auto;
+  padding: 8px 16px;
+  color: #fff;
+  background: #0c0d62;
+  font-weight: bold;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.open_btn:hover {
+  background: #000;
+  color: #fff;
+  transition: 0.3s ease;
+}
+/*ポップアップココまで*/
+
+/*  */
+
+/* スライドショーの設定 */
+/* https://web-camp.io/magazine/archives/80525 */
+
+/* 
+slider：@keyframesの名前を入力
+10s：アニメーションの開始から終了までを10秒で実行する
+infinite：アニメーションを永遠に繰り返すという意味
+ease：アニメーションの中央まで徐々にスピードが速くなり、後半にかけて遅くなる 
+*/
+
+.slider {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.slider-item {
+  width: 300px;
+  float: left;
+}
+.slider-img {
+  width: 100%;
+
+  /* 画像をboxにフィットさせるように拡大縮小 */
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  /* 画像をboxにフィットさせるように拡大縮小 */
+}
+.slider-inner {
+  width: 300%;
+  animation: slider 15s infinite;
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-300px);
+  }
+  66% {
+    transform: translateX(-600px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/*  */
+
+/* bxSlider */
+/* https://fukafuka295.jp/bxslider_option/ */
+
+.bxslider-myli > .bxslider-img {
+  display: inline;
+
+  /* 画像をboxにフィットさせるように拡大縮小 */
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  /* 画像をboxにフィットさせるように拡大縮小 */
+}
+
+.bxslider-mydiv {
+}
+
+.bxslider-myli {
+  text-align: center;
+}
+/*  */
+
+/* cocoen */
+/* https://fukafuka295.jp/slideshow_compare_cocoen/ */
+
+#cocoendiv {
+  width: 100%;
+}
+
+/*  */
