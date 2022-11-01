@@ -1,0 +1,34 @@
+header {
+    display: flex;
+    border-bottom: solid 1px;
+  }
+/* ヘッダーの左右 */
+.logodiv{
+    width: 30%;
+    padding: 5px 5%;
+}
+
+.menudiv{
+    width: 70%;
+    text-align: right;
+    padding: 0px 5%;
+    /* padding-top: 50px; */
+}
+/*  */
+
+/* 画像のdiv */
+.headerlogoimgdiv{
+    width: 50px;
+}
+
+/*  */
+
+/* 画像自体 */
+.headerlogoimg{
+    width: 100px;
+}
+
+.menuiconimg{
+    width: 50px;
+}
+/*  */

@@ -1,0 +1,14 @@
+main{
+    display: flex;
+}
+
+.colum1{
+    width: 20%;
+    border: solid 1px;
+}
+
+.colum2{
+    width: 80%;
+    border: solid 1px;
+    text-align: center;
+}
