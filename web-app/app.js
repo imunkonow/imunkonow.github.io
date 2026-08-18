@@ -1,5 +1,6 @@
 /**
  * Aomori Trip Web App - Main Application Logic
+ * 順序: 【案1】 ➔ 【案2】 ➔ 【案3】
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,7 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
   renderFerrySection();
   renderBudgetSection();
   renderChecklist();
-  renderTimeline('route-3'); // Default to Route 3 (Crown recommendation)
+  
+  // Default to Route 3 (Crown Recommendation) or Route 1
+  renderRouteSummary('route-3');
+  renderTimeline('route-3');
 });
 
 /**
@@ -31,9 +35,6 @@ function initRouteTabs() {
       renderTimeline(routeId);
     });
   });
-
-  // Initial Render
-  renderRouteSummary('route-3');
 }
 
 /**
@@ -86,23 +87,11 @@ function renderRouteSummary(routeId) {
         </ul>
       </div>
     </div>
-
-    ${route.googleMapsUrl ? `
-      <div style="margin-top:20px; padding:16px; background:#eff6ff; border:1px solid #bfdbfe; border-radius:10px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
-        <div>
-          <strong style="color:#1e3a8a; font-size:1rem;">🗺️ Googleマップ ナビゲーション連携</strong>
-          <p style="font-size:0.85rem; color:#475569; margin-top:2px;">全経由地（空港・十二湖・龍飛崎・フェリー・仏ヶ浦・大間・恐山・三内丸山）をセットしたルートを即座に開きます。</p>
-        </div>
-        <a href="${route.googleMapsUrl}" target="_blank" class="btn-primary" style="background:#2563eb; text-decoration:none; padding:10px 20px; font-size:0.9rem;">
-          <span>📍</span> Googleマップでルートを開く
-        </a>
-      </div>
-    ` : ''}
   `;
 }
 
 /**
- * 2. 日別タイムラインの動的描画
+ * 2. 日別タイムラインの動的描画（日別Googleマップリンク付き）
  */
 function renderTimeline(routeId) {
   const route = TRIP_DATA.routes.find(r => r.id === routeId);
@@ -125,7 +114,9 @@ function renderTimeline(routeId) {
         <div class="day-head-title">
           <span>🗓️</span> Day ${day.day} : ${day.title}
         </div>
-        <div class="day-head-stats">🚗 走行 ${day.distance} / ${day.driveTime}</div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <div class="day-head-stats">🚗 走行 ${day.distance} / ${day.driveTime}</div>
+        </div>
       </div>
       <div class="day-content">
         <ul class="timeline-events">
@@ -136,9 +127,18 @@ function renderTimeline(routeId) {
             </li>
           `).join('')}
         </ul>
+        
         <div class="stay-banner">
           <span>🏨</span> 宿泊: <strong>${day.stay}</strong>（${day.stayDetail}）
         </div>
+
+        ${day.mapUrl ? `
+          <div style="margin-top:12px; display:flex; justify-content:flex-end;">
+            <a href="${day.mapUrl}" target="_blank" class="btn-action-sm" style="background:#eff6ff; border-color:#bfdbfe; color:#1d4ed8; font-weight:700;">
+              <span>📍</span> Day ${day.day} のドライブナビをGoogleマップで開く
+            </a>
+          </div>
+        ` : ''}
       </div>
     </div>
   `).join('');
@@ -164,7 +164,7 @@ function renderSpots() {
       </div>
       <div class="spot-actions">
         ${spot.tel ? `<a href="tel:${spot.tel}" class="btn-action-sm">📞 電話: ${spot.tel}</a>` : ''}
-        <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(spot.mapQuery)}" target="_blank" class="btn-action-sm">🗺️ 地図</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(spot.mapQuery)}" target="_blank" class="btn-action-sm">🗺️ Googleマップ</a>
       </div>
     </div>
   `).join('');
