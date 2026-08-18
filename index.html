@@ -1,17 +1,1127 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>青森・下北・津軽 4泊5日 車旅 3大ルート徹底比較＆完全確定プラン | imunkonow.io</title>
+  <meta name="description" content="車旅初心者でも無理のない導線優先・夕食難民回避・主要Sランク完全制覇。青森4泊5日レンタカー旅の3大ルート徹底比較・むつ湾フェリー攻略・日別タイムライン・予約マニュアル。">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="青森 4泊5日 車旅 3大ルート徹底比較＆完全確定プラン">
+  <meta property="og:description" content="恐山宿坊・大間マグロ・仏ヶ浦・龍飛崎・髙山稲荷・十二湖青池を無理なく完全制覇する黄金ルート比較＆確定ガイド。">
+  <meta property="og:url" content="https://imunkonow.io/">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #f8fafc;
+      --bg-card: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --primary: #1d4ed8;
+      --primary-dark: #1e3a8a;
+      --primary-light: #eff6ff;
+      --accent: #059669;
+      --accent-light: #ecfdf5;
+      --gold: #d97706;
+      --gold-light: #fefce8;
+      --danger: #dc2626;
+      --danger-light: #fef2f2;
+      --border: #e2e8f0;
+      --border-subtle: #cbd5e1;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.04);
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-full: 9999px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Zen Kaku Gothic New', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    a:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Navigation */
+    header.site-header {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 64px;
+    }
+    .logo {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .btn-download {
+      background: var(--primary);
+      color: #ffffff !important;
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s;
+    }
+    .btn-download:hover {
+      background: var(--primary-dark);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-1px);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 48px 0 36px 0;
+      background: linear-gradient(180deg, #ffffff 0%, var(--bg-main) 100%);
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      border: 1px solid rgba(29, 78, 216, 0.15);
+    }
+    .hero-title {
+      font-size: 2.25rem;
+      font-weight: 900;
+      line-height: 1.25;
+      color: #0c192c;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 780px;
+      margin-bottom: 24px;
+    }
+
+    /* Stat Cards Bar */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+    .stat-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .stat-value {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+    .stat-sub {
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 48px 0;
+    }
+    .section-header {
+      margin-bottom: 28px;
+    }
+    .section-tag {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+    .section-title {
+      font-size: 1.65rem;
+      font-weight: 900;
+      color: #0c192c;
+      letter-spacing: -0.01em;
+    }
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* 3 Routes Comparison */
+    .comparison-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+    .route-tabs {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      border-bottom: 1px solid var(--border);
+      background: #f1f5f9;
+    }
+    .route-tab {
+      padding: 18px 16px;
+      text-align: center;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s;
+    }
+    .route-tab:hover {
+      background: #e2e8f0;
+      color: var(--text-main);
+    }
+    .route-tab.active {
+      background: var(--bg-card);
+      color: var(--primary-dark);
+      border-bottom-color: var(--primary);
+    }
+    .tab-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      margin-left: 6px;
+    }
+    .badge-crown { background: #fef08a; color: #854d0e; }
+    .badge-star { background: #dcfce7; color: #166534; }
+    .badge-cross { background: #fee2e2; color: #991b1b; }
+
+    .tab-content {
+      padding: 28px;
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.9rem;
+    }
+    .spec-table th, .spec-table td {
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    .spec-table th {
+      background: #f8fafc;
+      font-weight: 700;
+      width: 25%;
+    }
+
+    /* S-Rank Spots Grid */
+    .spot-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px;
+    }
+    .spot-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .spot-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .spot-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+    .spot-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #0c192c;
+    }
+    .spot-badge {
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+    }
+    .spot-s { background: var(--danger-light); color: var(--danger); }
+    .spot-time {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    .spot-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .spot-tip {
+      background: #f8fafc;
+      border-left: 3px solid var(--primary);
+      padding: 8px 12px;
+      margin-top: 12px;
+      font-size: 0.82rem;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+
+    /* Timeline Day Cards */
+    .day-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      margin-bottom: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .day-header {
+      background: linear-gradient(90deg, #1e293b 0%, #334155 100%);
+      color: #ffffff;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .day-title {
+      font-weight: 800;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .day-drive {
+      font-size: 0.82rem;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+    }
+    .day-body {
+      padding: 20px;
+    }
+    .timeline-list {
+      list-style: none;
+      position: relative;
+      padding-left: 24px;
+    }
+    .timeline-list::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: #e2e8f0;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 16px;
+      font-size: 0.9rem;
+    }
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -24px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 2px solid #ffffff;
+      box-shadow: 0 0 0 2px var(--primary-light);
+    }
+    .time-badge {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      color: var(--primary);
+      margin-right: 8px;
+    }
+    .stay-box {
+      margin-top: 14px;
+      padding: 10px 14px;
+      background: var(--accent-light);
+      border: 1px solid #bbf7d0;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      color: #166534;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+    }
+
+    /* Ferry Alert Box */
+    .ferry-box {
+      background: #fffbeb;
+      border: 1.5px solid #f59e0b;
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin: 24px 0;
+    }
+    .ferry-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #92400e;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    /* Checklist */
+    .todo-list {
+      list-style: none;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 8px 16px;
+    }
+    .todo-item {
+      display: flex;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+    .todo-item:last-child {
+      border-bottom: none;
+    }
+    .todo-item input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      margin-right: 12px;
+      accent-color: var(--primary);
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer.site-footer {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 40px 0;
+      font-size: 0.85rem;
+      margin-top: 60px;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-title { font-size: 1.75rem; }
+      .route-tabs { grid-template-columns: 1fr; }
+      .header-inner { flex-direction: column; height: auto; padding: 12px 0; gap: 8px; }
+      .nav-links { gap: 12px; font-size: 0.8rem; }
+      .tab-content { padding: 16px; }
+    }
+
+    @media print {
+      header.site-header, .btn-download, .route-tabs, footer.site-footer { display: none !important; }
+      body { background: #fff; font-size: 8pt; }
+      .container { max-width: 100%; padding: 0; }
+      .tab-content { display: block !important; padding: 0; }
+      .day-card { break-inside: avoid; margin-bottom: 12px; }
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello World!!</h1>
-    <p><a href="/index2.html">index2.html</a></p>
-    <p><a href="template.html">template.html</a></p>
-    <section>
-        <p><a href="javascript:history.back()">戻る</a></p>
-    </section>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span>🗺️</span> 青森・下北・津軽 車旅 2026
+      </div>
+      <ul class="nav-links">
+        <li><a href="#comparison">3ルート徹底比較</a></li>
+        <li><a href="#spots">Sランク攻略</a></li>
+        <li><a href="#ferry">フェリー攻略</a></li>
+        <li><a href="#itinerary">日別タイムライン</a></li>
+        <li><a href="#checklist">予約ToDo</a></li>
+      </ul>
+      <a href="aomori_trip_plan_3routes.pdf" class="btn-download" download>
+        <span>📄</span> 確定PDFダウンロード
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <span>✨</span> 4泊5日 車旅完全確定計画書（参加者: T・G）
+      </div>
+      <h1 class="hero-title">
+        青森・下北・津軽半島 4泊5日<br>
+        3大ルート徹底比較＆完全制覇モデル
+      </h1>
+      <p class="hero-desc">
+        車旅初心者でも安心の導線設計・夕食難民回避・主要Sランク（恐山宿坊・大間マグロ・仏ヶ浦・龍飛崎・髙山稲荷・十二湖青池・三内丸山遺跡）を完璧な時間配分で制覇する確定計画です。
+      </p>
+
+      <!-- Stats Bar -->
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-label">日程・スタイル</div>
+          <div class="stat-value">4泊5日</div>
+          <div class="stat-sub">レンタカー周遊</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">総走行距離（案3）</div>
+          <div class="stat-value">約 580 km</div>
+          <div class="stat-sub">1日平均 2.4時間 ✨</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">概算予算（1人）</div>
+          <div class="stat-value">約 14.5 万円</div>
+          <div class="stat-sub">全泊夕食付・大間マグロ込</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Sランクスポット</div>
+          <div class="stat-value">7 箇所制覇</div>
+          <div class="stat-sub">妥協なし 100% 網羅</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 Routes Comparison Section -->
+  <section id="comparison">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Route Comparison & Review</div>
+        <h2 class="section-title">3大ルート徹底比較レビュー（RV）</h2>
+        <p class="section-subtitle">予約変更リスクが少額である現在、移動効率と体力の観点から3案を精密に比較・検証しました。</p>
+      </div>
+
+      <div class="comparison-container">
+        <!-- Tab Navigation -->
+        <div class="route-tabs">
+          <div class="route-tab active" onclick="switchTab('tab-route3', this)">
+            👑 【案3】秋田IN ➔ 青森OUT
+            <span class="tab-badge badge-crown">最高推奨</span>
+          </div>
+          <div class="route-tab" onclick="switchTab('tab-route2', this)">
+            ★ 【案2】青森発着＋早朝フェリー
+            <span class="tab-badge badge-star">大本命</span>
+          </div>
+          <div class="route-tab" onclick="switchTab('tab-route1', this)">
+            ❌ 【案1】八戸含む全周周遊
+            <span class="tab-badge badge-cross">非推奨</span>
+          </div>
+        </div>
+
+        <!-- Tab 3 Content (Highest Recommended) -->
+        <div id="tab-route3" class="tab-content active">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:16px;">
+            <h3 style="font-size:1.25rem; font-weight:800; color:#1e3a8a;">
+              👑 【案3】秋田/大館能代IN ➔ 西海岸 ➔ 津軽 ➔ むつ湾フェリー ➔ 下北 ➔ 青森OUT
+            </h3>
+            <span style="background:#dcfce7; color:#166534; padding:4px 12px; border-radius:9999px; font-weight:800; font-size:0.85rem;">
+              総合評価: ★★★★★+（神プラン）
+            </span>
+          </div>
+          <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:16px;">
+            <strong>【解説】</strong> 大館能代空港（または秋田空港）から入り、白神山地・十二湖を皮切りに津軽・下北を巡り青森空港へ抜ける<strong>「完全一筆書き」</strong>ルート。
+            青森県内での無駄な往復・重複走行が完全にゼロとなり、1日あたりの運転時間が<strong>わずか2.4時間</strong>に激減します。
+          </p>
+
+          <table class="spec-table">
+            <tr>
+              <th>総走行距離 / 運転時間</th>
+              <td><strong style="color:var(--accent); font-size:1.1rem;">約 580 km</strong> / <strong>約 12〜13 時間</strong>（最短）</td>
+            </tr>
+            <tr>
+              <th>1日平均運転</th>
+              <td><strong style="color:var(--accent);">約 2.4 時間 / 日</strong> ✨（ゆとり十分・初心者でも極めて快適）</td>
+            </tr>
+            <tr>
+              <th>予約変更コスト</th>
+              <td>往路航空券の差額＋レンタカー乗り捨て料金（約1万円）のみ</td>
+            </tr>
+            <tr>
+              <th>最大のメリット</th>
+              <td>重複走行ゼロ。白神山地〜津軽〜仏ヶ浦〜大間〜恐山〜三内丸山が全て完璧な順路で繋がる。</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Tab 2 Content (Main Alternative) -->
+        <div id="tab-route2" class="tab-content">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:16px;">
+            <h3 style="font-size:1.25rem; font-weight:800; color:#1e3a8a;">
+              ★ 【案2】青森発着 改良周遊（八戸カット ＆ 朝9:20フェリー活用）
+            </h3>
+            <span style="background:#e0f2fe; color:#0369a1; padding:4px 12px; border-radius:9999px; font-weight:800; font-size:0.85rem;">
+              総合評価: ★★★★★（大本命）
+            </span>
+          </div>
+          <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:16px;">
+            <strong>【解説】</strong> 既存の「青森発着航空券・レンタカー」を一切変更せずに済む最良ルート。
+            八戸をカットして移動距離を圧縮し、Day2宿泊地を津軽北部に寄せることで<strong>朝9:20のむつ湾フェリー</strong>に余裕で接続します。
+          </p>
+
+          <table class="spec-table">
+            <tr>
+              <th>総走行距離 / 運転時間</th>
+              <td><strong>約 760 km</strong> / <strong>約 16〜17 時間</strong></td>
+            </tr>
+            <tr>
+              <th>1日平均運転</th>
+              <td><strong>約 3.2 時間 / 日</strong> 🚗（観光と運転のバランス良好）</td>
+            </tr>
+            <tr>
+              <th>予約変更コスト</th>
+              <td><strong style="color:var(--accent);">0 円（現状維持でOK）</strong></td>
+            </tr>
+            <tr>
+              <th>最大のメリット</th>
+              <td>予約変更の手間が不要。八戸を削ることで観光滞在時間をしっかり確保。</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Tab 1 Content (Not Recommended) -->
+        <div id="tab-route1" class="tab-content">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:16px;">
+            <h3 style="font-size:1.25rem; font-weight:800; color:#991b1b;">
+              ❌ 【案1】八戸を含む大回り全周周遊
+            </h3>
+            <span style="background:#fee2e2; color:#991b1b; padding:4px 12px; border-radius:9999px; font-weight:800; font-size:0.85rem;">
+              総合評価: ★★☆☆☆（非推奨）
+            </span>
+          </div>
+          <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:16px;">
+            <strong>【解説】</strong> 八戸（蕪嶋神社・八食センター）まで欲張って周遊する案。
+            総走行距離が1,000kmを超え、1日平均5時間近く運転することになるため、Sランクスポットの滞在時間が削られ「免許合宿状態」に陥るリスク大。
+          </p>
+
+          <table class="spec-table">
+            <tr>
+              <th>総走行距離 / 運転時間</th>
+              <td><strong style="color:var(--danger); font-size:1.1rem;">約 1,050 km</strong> 💀 / <strong>約 24〜25 時間</strong></td>
+            </tr>
+            <tr>
+              <th>1日平均運転</th>
+              <td><strong style="color:var(--danger);">約 4.8 時間 / 日</strong>（ほぼ移動だけで日暮れ）</td>
+            </tr>
+            <tr>
+              <th>最大のデメリット</th>
+              <td>運転疲労が甚大で、日没後の山道走行や夕食遅刻のリスクが非常に高い。</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Critical Ferry & Traps Section -->
+  <section id="ferry" style="background:#f1f5f9; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Critical Strategy</div>
+        <h2 class="section-title">むつ湾フェリー ＆ 運行トラップ完全攻略</h2>
+        <p class="section-subtitle">計画を成功させるための最重要チェックポイント（公式ダイヤ検証済）</p>
+      </div>
+
+      <div class="ferry-box">
+        <div class="ferry-title">
+          <span>⚠️</span> 【最重要警告】フェリーは「蟹田 09:20発（1便）」が絶対条件！
+        </div>
+        <p style="font-size:0.9rem; color:#78350f; line-height:1.6;">
+          むつ湾フェリーの午後の便（蟹田 14:00発 ➔ 脇野沢 15:00着）に乗ると、仏ヶ浦に立ち寄った場合、<strong>恐山宿坊「吉祥閣」（門限17:00 / 夕食17:30厳守）への到着が18:45以降になり物理的に破綻</strong>します。<br>
+          必ず <strong>「蟹田 09:20発 ➔ 脇野沢 10:20着（1便）」</strong> を予約してください。乗船日1ヶ月前の同日午前9:00より電話・Webで予約可能です。
+        </p>
+      </div>
+
+      <div class="spot-grid">
+        <div class="spot-card">
+          <div class="spot-title" style="color:#1e3a8a;">🚢 むつ湾フェリー 公式ダイヤ</div>
+          <div class="spot-desc" style="margin-top:8px;">
+            <ul style="padding-left:18px; font-size:0.85rem;">
+              <li><strong>蟹田発 ➔ 脇野沢着</strong>: <strong>1便 09:20 ➔ 10:20</strong> ／ 3便 14:00 ➔ 15:00</li>
+              <li><strong>脇野沢発 ➔ 蟹田着</strong>: 2便 10:50 ➔ 11:50 ／ 4便 15:30 ➔ 16:30</li>
+              <li>運航期間: 4月21日〜11月5日（所要60分・車両事前予約制）</li>
+              <li>電話番号: 蟹田 0174-22-3020 / 脇野沢 0175-44-3371</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="spot-card">
+          <div class="spot-title" style="color:#059669;">🌊 仏ヶ浦は「佐井港 観光遊覧船」推奨</div>
+          <div class="spot-desc" style="margin-top:8px;">
+            <p>
+              陸路の駐車場からの階段は<strong>高低差100m（急登25分）</strong>で夏場は体力を激しく消耗します。<br>
+              <strong>佐井港（アルサス）からの定期観光遊覧船</strong>（佐井定期観光 / 0175-38-2255）を利用すれば、海上からの壮大な奇岩群＋上陸30分散策で快適に満喫できます。
+            </p>
+          </div>
+        </div>
+
+        <div class="spot-card">
+          <div class="spot-title" style="color:#d97706;">🛡️ 荒天・欠航時の緊急リカバリ（Bプラン）</div>
+          <div class="spot-desc" style="margin-top:8px;">
+            <p>
+              当日朝8:00の運行情報で欠航が確定した場合、蟹田から陸路（青森市・野辺地経由）でむつ市へ迂回（車で約3時間）。<br>
+              Day3は恐山・大間を先に行い、仏ヶ浦をDay4に回すことで全行程を救済できます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S-Rank Spots Section -->
+  <section id="spots">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Must-Visit Spots</div>
+        <h2 class="section-title">Sランク制覇ターゲット（全7箇所）</h2>
+        <p class="section-subtitle">T・Gが厳選した絶対外せない最優先スポット＆名店</p>
+      </div>
+
+      <div class="spot-grid">
+        <!-- 恐山 宿坊 -->
+        <div class="spot-card">
+          <div class="spot-header">
+            <div class="spot-title">恐山 宿坊「吉祥閣」</div>
+            <span class="spot-badge spot-s">Sランク 宿</span>
+          </div>
+          <div class="spot-time">📍 下北半島・むつ市 | 所要：1泊（17:00着厳守）</div>
+          <div class="spot-desc">
+            日本三大霊場の境内に宿泊する唯一無二の異世界体験。名湯・恐山温泉に浸かり、本格的な精進料理をいただく。夜の静寂と朝の勤行（自由参加）は圧巻。
+          </div>
+          <div class="spot-tip">
+            📞 予約電話: <strong>0175-22-3825</strong>（満室時は即「民宿 海峡荘」へ）
+          </div>
+        </div>
+
+        <!-- 大間 海峡荘 -->
+        <div class="spot-card">
+          <div class="spot-header">
+            <div class="spot-title">大間「民宿 海峡荘」</div>
+            <span class="spot-badge spot-s">Sランク 飯</span>
+          </div>
+          <div class="spot-time">📍 本州最北端・大間崎 | 所要：1〜1.5時間</div>
+          <div class="spot-desc">
+            本州最北端・大間崎の目の前に位置する名店。店主自ら仕入れる極上の大間本マグロ丼（赤身・中トロ・大トロ）は感動必至のクオリティ。
+          </div>
+          <div class="spot-tip">
+            📞 電話: <strong>0175-37-3691</strong>（昼食利用可能・売切注意）
+          </div>
+        </div>
+
+        <!-- 仏ヶ浦 -->
+        <div class="spot-card">
+          <div class="spot-header">
+            <div class="spot-title">仏ヶ浦（ほとけがうら）</div>
+            <span class="spot-badge spot-s">Sランク 景勝地</span>
+          </div>
+          <div class="spot-time">📍 下北半島・佐井村 | 所要：1.5〜2時間</div>
+          <div class="spot-desc">
+            約2kmにわたって白緑色の巨大な奇岩が連なる国の名勝・天然記念物。仏の名を冠した神秘的な巨岩群がエメラルドグリーンの海に聳え立つ。
+          </div>
+          <div class="spot-tip">
+            💡 佐井港アルサスからの定期観光船（往復約1.5時間）がおすすめ。
+          </div>
+        </div>
+
+        <!-- 龍飛崎 -->
+        <div class="spot-card">
+          <div class="spot-header">
+            <div class="spot-title">龍飛崎（たっぴざき）</div>
+            <span class="spot-badge spot-s">Sランク 絶景</span>
+          </div>
+          <div class="spot-time">📍 津軽半島最北端・外ヶ浜町 | 所要：1時間</div>
+          <div class="spot-desc">
+            津軽海峡を一望する断崖絶壁。日本で唯一車が通れない「階段国道339号」や、ボタンを押すと大音量で流れる「津軽海峡・冬景色歌碑」がある名所。
+          </div>
+          <div class="spot-tip">
+            🌊 竜泊ライン（国道339号）の海沿いワインディングロードも絶景。
+          </div>
+        </div>
+
+        <!-- 髙山稲荷神社 -->
+        <div class="spot-card">
+          <div class="spot-header">
+            <div class="spot-title">髙山稲荷神社</div>
+            <span class="spot-badge spot-s">Sランク 神社</span>
+          </div>
+          <div class="spot-time">📍 つがる市 | 所要：1時間</div>
+          <div class="spot-desc">
+            日本庭園の中に幾重にも連なる鮮やかな「千本鳥居」が龍のようにうねる絶景神社。商売繁盛・航海安全の霊験あらたかな東北屈指のパワースポット。
+          </div>
+          <div class="spot-tip">
+            📸 高台の展望所から見下ろす千本鳥居の全景がベストフォトスポット。
+          </div>
+        </div>
+
+        <!-- 白神山地 十二湖 -->
+        <div class="spot-card">
+          <div class="spot-header">
+            <div class="spot-title">白神山地・十二湖（青池）</div>
+            <span class="spot-badge spot-s">Sランク 自然</span>
+          </div>
+          <div class="spot-time">📍 西津軽郡深浦町 | 所要：1.5時間</div>
+          <div class="spot-desc">
+            世界自然遺産・白神山地の麓に点在する湖沼群。まるでインクを流し込んだような鮮烈なコバルトブルーを誇る「青池」とブナ原生林の散策路。
+          </div>
+          <div class="spot-tip">
+            👟 「森の物産館キョロロ」駐車場から青池・沸壺の池を周回（徒歩約40分）。
+          </div>
+        </div>
+
+        <!-- 三内丸山遺跡 -->
+        <div class="spot-card">
+          <div class="spot-header">
+            <div class="spot-title">特別史跡 三内丸山遺跡</div>
+            <span class="spot-badge spot-s">Sランク 世界遺産</span>
+          </div>
+          <div class="spot-time">📍 青森市 | 所要：1.5時間</div>
+          <div class="spot-desc">
+            世界文化遺産「北海道・北東北の縄文遺跡群」の中心。約5,900年前〜4,200年前の大規模集落跡。復元された大型掘立柱建物や大型竪穴住居は圧巻。
+          </div>
+          <div class="spot-tip">
+            🏛️ 青森空港・新青森駅からのアクセス良好。ミュージアムショップも充実。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Timeline Section -->
+  <section id="itinerary" style="background:#f8fafc; border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Day by Day Schedule</div>
+        <h2 class="section-title">日別確定スケジュール（案3：秋田発モデル）</h2>
+        <p class="section-subtitle">時間・走行距離・立ち寄り先・宿を網羅した詳細タイムライン</p>
+      </div>
+
+      <!-- Day 1 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-title"><span>🗓️</span> Day 1 : 西海岸 ＆ 世界遺産 白神山地</div>
+          <div class="day-drive">🚗 走行約 90 km / 約 2 時間</div>
+        </div>
+        <div class="day-body">
+          <ul class="timeline-list">
+            <li class="timeline-item">
+              <span class="time-badge">11:30</span> <strong>大館能代空港 または 秋田空港 到着</strong>（レンタカー貸出手続き・出発）
+            </li>
+            <li class="timeline-item">
+              <span class="time-badge">13:30</span> <strong>白神山地・十二湖（青池 ＆ 沸壺の池散策 / 約1.5h）</strong>
+            </li>
+            <li class="timeline-item">
+              <span class="time-badge">16:00</span> <strong>千畳敷海岸</strong>（夕日の名所・畳を敷き詰めたような奇岩海岸）
+            </li>
+            <li class="timeline-item">
+              <span class="time-badge">17:30</span> <strong>深浦温泉 到着・チェックイン</strong>
+            </li>
+          </ul>
+          <div class="stay-box">
+            <span>🏨</span> 宿泊: <strong>深浦 / 黄金崎不老ふ死温泉</strong>（日本海に面した絶景露天風呂・海鮮夕食会席）
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 2 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-title"><span>🗓️</span> Day 2 : 津軽の絶景 ＆ 本州最北端 龍飛崎</div>
+          <div class="day-drive">🚗 走行約 160 km / 約 3.5 時間</div>
+        </div>
+        <div class="day-body">
+          <ul class="timeline-list">
+            <li class="timeline-item">
+              <span class="time-badge">08:30</span> 深浦出発 ➔ 国道101号を北上
+            </li>
+            <li class="timeline-item">
+              <span class="time-badge">09:45</span> <strong>鶴の舞橋</strong>（日本一長い木造三連太鼓橋・岩木山の水鏡）
+            </li>
+            <li class="timeline-item">
+              <span class="time-badge">10:45</span> <strong>髙山稲荷神社</strong>（龍のようにうねる千本鳥居と日本庭園）
+            </li>
+            <li class="timeline-item">
+              <span class="time-badge">12:30</span> 中泊・十三湖周辺で昼食（特産しじみラーメン等）
+            </li>
+            <li class="timeline-item">
+              <span class="time-badge">14:30</span> <strong>龍飛崎</strong>（階段国道339号・津軽海峡冬景色歌碑・展望台）
+            </li>
+            <li class="timeline-item">
+              <span class="time-badge">17:00</span> <strong>津軽半島北部（蟹田・五所川原・今別エリア）宿泊地へ</strong>
+            </li>
+          </ul>
+          <div class="stay-box">
+            <span>🏨</span> 宿泊: <strong>蟹田・五所川原エリア</strong>（翌朝の蟹田港9:20フェリーに直結する立地）
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 3 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-title"><span>🗓️</span> Day 3 : 海峡横断 ＆ 下北Sランク完全制覇</div>
+          <div class="day-drive">🚗 走行約 110 km / 約 2.5 時間</div>
+        </div>
+        <div class="day-body">
+          <ul class="timeline-list">
+            <li class="timeline-item">
+              <span class="time-badge">08:50</span> <strong>蟹田港フェリーターミナル到着・乗船手続き</strong>
+            </li>
+            <li class="timeline-item">
+              <span class="time-badge">09:20〜10:20</span> 🚢 <strong>むつ湾フェリー（1便）津軽 ➔ 下北 60分クルーズ</strong>
+            </li>
+            <li class="timeline-item">
+              <span class="time-badge">10:30</span> 脇野沢港発 ➔ 国道338号（海峡ライン）
+            </li>
+            <li class="timeline-item">
+              <span class="time-badge">11:45</span> <strong>佐井港（アルサス）/ 仏ヶ浦 定期観光遊覧船（奇岩海上見学＆上陸散策）</strong>
+            </li>
+            <li class="timeline-item">
+              <span class="time-badge">14:00</span> <strong>大間崎 ＆ 大間「民宿 海峡荘」で極上大間マグロ丼昼食</strong>
+            </li>
+            <li class="timeline-item">
+              <span class="time-badge">15:30</span> 大間発 ➔ 霊場恐山へ
+            </li>
+            <li class="timeline-item">
+              <span class="time-badge">16:45</span> <strong>恐山 宿坊「吉祥閣」チェックイン</strong>（17:00門限クリア・温泉入浴）
+            </li>
+          </ul>
+          <div class="stay-box" style="background:#fef2f2; border-color:#fecaca; color:#991b1b;">
+            <span>🏨</span> 宿泊: <strong>恐山 宿坊「吉祥閣」</strong>（名湯・恐山温泉 / 17:30 精進料理夕食）
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 4 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-title"><span>🗓️</span> Day 4 : 霊場参拝 ＆ 縄文世界遺産 三内丸山</div>
+          <div class="day-drive">🚗 走行約 140 km / 約 3 時間</div>
+        </div>
+        <div class="day-body">
+          <ul class="timeline-list">
+            <li class="timeline-item">
+              <span class="time-badge">06:30</span> 朝のお勤め（自由参加） ➔ 朝食
+            </li>
+            <li class="timeline-item">
+              <span class="time-badge">08:00</span> <strong>恐山境内参拝（地獄巡り・極楽浜・宇曽利湖）</strong>
+            </li>
+            <li class="timeline-item">
+              <span class="time-badge">10:00</span> 恐山出発 ➔ むつ市・横浜町経由（道の駅よこはま・ほたて）
+            </li>
+            <li class="timeline-item">
+              <span class="time-badge">13:30</span> <strong>特別史跡 三内丸山遺跡</strong>（世界文化遺産・縄文集落見学）
+            </li>
+            <li class="timeline-item">
+              <span class="time-badge">17:00</span> <strong>青森市内 または 浅虫温泉 チェックイン</strong>
+            </li>
+          </ul>
+          <div class="stay-box">
+            <span>🏨</span> 宿泊: <strong>青森市内 または 浅虫温泉</strong>（郷土料理居酒屋・青森の地酒）
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 5 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-title"><span>🗓️</span> Day 5 : 青森ウォーターフロント ＆ 帰路フライト</div>
+          <div class="day-drive">🚗 走行約 20 km / 約 0.5 時間</div>
+        </div>
+        <div class="day-body">
+          <ul class="timeline-list">
+            <li class="timeline-item">
+              <span class="time-badge">09:30</span> <strong>ねぶたの家 ワ・ラッセ</strong>（迫力の本物大型ねぶた展示館）
+            </li>
+            <li class="timeline-item">
+              <span class="time-badge">11:00</span> <strong>A-FACTORY</strong>（青森県産アップルパイ・シードル試飲工房・お土産）
+            </li>
+            <li class="timeline-item">
+              <span class="time-badge">13:00</span> <strong>青森空港 レンタカー返却 ➔ 帰路フライト</strong>
+            </li>
+          </ul>
+          <div class="stay-box" style="background:#f1f5f9; border-color:#cbd5e1; color:#334155;">
+            <span>✈️</span> <strong>青森空港 OUT</strong>（お疲れ様でした！）
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation Checklist Section -->
+  <section id="checklist">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Action Checklist</div>
+        <h2 class="section-title">予約・手配実行チェックリスト</h2>
+        <p class="section-subtitle">クリックするとチェック状態がブラウザに自動保存されます</p>
+      </div>
+
+      <div class="todo-list">
+        <label class="todo-item">
+          <input type="checkbox" id="todo-1" onchange="saveTodo()">
+          <span><strong>1. 恐山 宿坊「吉祥閣」（0175-22-3825）に電話予約</strong>（3泊目で確保 / 満室時は大間「民宿 海峡荘 0175-37-3691」へ）</span>
+        </label>
+        <label class="todo-item">
+          <input type="checkbox" id="todo-2" onchange="saveTodo()">
+          <span><strong>2. 航空券・レンタカー便の変更確認</strong>（往路：大館能代または秋田着、レンタカー乗り捨て手配）</span>
+        </label>
+        <label class="todo-item">
+          <input type="checkbox" id="todo-3" onchange="saveTodo()">
+          <span><strong>3. むつ湾フェリー予約（乗船日1ヶ月前）</strong>（蟹田 09:20発 1便 車両枠をWeb/電話 0174-22-3020 で確保）</span>
+        </label>
+        <label class="todo-item">
+          <input type="checkbox" id="todo-4" onchange="saveTodo()">
+          <span><strong>4. 残り3泊の宿を確保（夕食付プラン推奨）</strong>（Day1深浦、Day2蟹田/五所川原、Day4青森市内）</span>
+        </label>
+        <label class="todo-item">
+          <input type="checkbox" id="todo-5" onchange="saveTodo()">
+          <span><strong>5. 仏ヶ浦 観光遊覧船（佐井定期観光 0175-38-2255）の運航確認</strong></span>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>青森 4泊5日 車旅 完全計画書</strong> | T ＆ G
+      </div>
+      <div>
+        Generated for <a href="https://imunkonow.io" style="color:#60a5fa;">imunkonow.io</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function switchTab(tabId, tabElement) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.route-tab').forEach(el => el.classList.remove('active'));
+      
+      document.getElementById(tabId).classList.add('active');
+      tabElement.classList.add('active');
+    }
+
+    function saveTodo() {
+      for (let i = 1; i <= 5; i++) {
+        const checkbox = document.getElementById('todo-' + i);
+        if (checkbox) {
+          localStorage.setItem('aomori_todo_' + i, checkbox.checked);
+        }
+      }
+    }
+
+    function loadTodo() {
+      for (let i = 1; i <= 5; i++) {
+        const checkbox = document.getElementById('todo-' + i);
+        if (checkbox) {
+          const val = localStorage.getItem('aomori_todo_' + i);
+          if (val !== null) {
+            checkbox.checked = (val === 'true');
+          }
+        }
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', loadTodo);
+  </script>
 </body>
 </html>
