@@ -23,6 +23,8 @@ const TRIP_DATA = {
       changeCost: "少額（片道便差額 ＋ 乗り捨て約1万円）",
       rating: 5,
       score: "98点",
+      googleMapsUrl: "https://www.google.com/maps/dir/%E5%A4%A7%E9%A4%A8%E8%83%BD%E4%BB%A3%E7%A9%BA%E6%B8%AF/%E5%8D%81%E4%BA%8C%E6%B9%96+%E9%9D%92%E6%B1%A0/%E9%AB%99%E5%B1%B1%E7%A8%B2%E8%8D%B7%E7%A5%9E%E7%A4%BE/%E9%BE%8D%E9%A3%9B%E5%B4%8E/%E8%9F%99%E7%94%B0%E6%B8%AF/%E8%84%87%E9%87%8E%E6%B2%A2%E6%B8%AF/%E4%BB%8F%E3%83%B6%E6%55%A6/%E5%A4%A7%E9%96%93%E5%B4%8E/%E6%81%90%E5%B1%B1%E5%AE%87%E6%9B%BD%E5%88%A9%E6%B9%96/%E4%B8%89%E5%86%85%E4%B8%B8%E5%B1%B1%E9%81%BA%E8%B7%A1/%E9%9D%92%E6%A3%AE%E7%A9%BA%E6%B8%AF",
+      embedMapQuery: "青森県",
       description: "大館能代空港（または秋田空港）から入り、白神山地・十二湖から津軽・下北・青森へと抜ける究極の一筆書き。重複区間が一切なく、運転疲労を最小限に抑えながら全Sランクを完全制覇できます。",
       pros: [
         "県内での重複走行が完全ゼロ（最短580km）",

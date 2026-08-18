@@ -86,6 +86,18 @@ function renderRouteSummary(routeId) {
         </ul>
       </div>
     </div>
+
+    ${route.googleMapsUrl ? `
+      <div style="margin-top:20px; padding:16px; background:#eff6ff; border:1px solid #bfdbfe; border-radius:10px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+        <div>
+          <strong style="color:#1e3a8a; font-size:1rem;">🗺️ Googleマップ ナビゲーション連携</strong>
+          <p style="font-size:0.85rem; color:#475569; margin-top:2px;">全経由地（空港・十二湖・龍飛崎・フェリー・仏ヶ浦・大間・恐山・三内丸山）をセットしたルートを即座に開きます。</p>
+        </div>
+        <a href="${route.googleMapsUrl}" target="_blank" class="btn-primary" style="background:#2563eb; text-decoration:none; padding:10px 20px; font-size:0.9rem;">
+          <span>📍</span> Googleマップでルートを開く
+        </a>
+      </div>
+    ` : ''}
   `;
 }
 
