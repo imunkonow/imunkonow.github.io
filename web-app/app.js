@@ -133,11 +133,9 @@ function renderTimeline(routeId) {
         </div>
 
         ${day.mapUrl ? `
-          <div style="margin-top:12px; display:flex; justify-content:flex-end;">
-            <a href="${day.mapUrl}" target="_blank" class="btn-action-sm" style="background:#eff6ff; border-color:#bfdbfe; color:#1d4ed8; font-weight:700;">
-              <span>📍</span> Day ${day.day} のドライブナビをGoogleマップで開く
-            </a>
-          </div>
+          <a href="${day.mapUrl}" target="_blank" class="btn-day-map">
+            <span>📍</span> Day ${day.day} のドライブナビを開く
+          </a>
         ` : ''}
       </div>
     </div>
@@ -179,29 +177,31 @@ function renderFerrySection() {
 
   const f = TRIP_DATA.ferry;
   container.innerHTML = `
-    <table class="ferry-table">
-      <thead>
-        <tr>
-          <th>行き先</th>
-          <th>便名</th>
-          <th>出港</th>
-          <th>到着</th>
-          <th>備考・推奨度</th>
-        </tr>
-      </thead>
-      <tbody>
-        ${f.timetable.map(t => `
-          <tr style="${t.note.includes('推奨') ? 'background:#ecfdf5; font-weight:bold; color:#065f46;' : (t.note.includes('破綻') ? 'background:#fef2f2; color:#991b1b;' : '')}">
-            <td>${t.bound}</td>
-            <td>${t.no}</td>
-            <td>${t.depart}</td>
-            <td>${t.arrive}</td>
-            <td>${t.note}</td>
+    <div class="table-responsive">
+      <table class="ferry-table">
+        <thead>
+          <tr>
+            <th>行き先</th>
+            <th>便名</th>
+            <th>出港</th>
+            <th>到着</th>
+            <th>備考・推奨度</th>
           </tr>
-        `).join('')}
-      </tbody>
-    </table>
-    <div style="font-size:0.85rem; color:var(--text-muted); margin-top:8px;">
+        </thead>
+        <tbody>
+          ${f.timetable.map(t => `
+            <tr style="${t.note.includes('推奨') ? 'background:#ecfdf5; font-weight:bold; color:#065f46;' : (t.note.includes('破綻') ? 'background:#fef2f2; color:#991b1b;' : '')}">
+              <td>${t.bound}</td>
+              <td>${t.no}</td>
+              <td>${t.depart}</td>
+              <td>${t.arrive}</td>
+              <td>${t.note}</td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+    </div>
+    <div style="font-size:0.82rem; color:var(--text-muted); margin-top:8px; line-height:1.5;">
       ・<strong>運航期間</strong>: ${f.period}（所要 ${f.duration}・車両事前予約制）<br>
       ・<strong>予約電話</strong>: 蟹田本社 0174-22-3020 / 脇野沢 0175-44-3371<br>
       ・<strong>公式サイト</strong>: <a href="${f.webUrl}" target="_blank">${f.webUrl}</a>
@@ -219,31 +219,33 @@ function renderBudgetSection() {
   const total = TRIP_DATA.budgetBreakdown.reduce((sum, item) => sum + item.costPerPerson, 0);
 
   container.innerHTML = `
-    <table style="width:100%; border-collapse:collapse; font-size:0.9rem;">
-      <thead>
-        <tr style="background:#f8fafc; border-bottom:2px solid var(--border);">
-          <th style="padding:10px; text-align:left;">項目</th>
-          <th style="padding:10px; text-align:right;">1人あたり概算</th>
-          <th style="padding:10px; text-align:left;">備考・内訳</th>
-        </tr>
-      </thead>
-      <tbody>
-        ${TRIP_DATA.budgetBreakdown.map(b => `
-          <tr style="border-bottom:1px solid var(--border);">
-            <td style="padding:10px; font-weight:700;">${b.item}</td>
-            <td style="padding:10px; text-align:right; font-family:'Plus Jakarta Sans', sans-serif; font-weight:700;">${b.costPerPerson.toLocaleString()} 円</td>
-            <td style="padding:10px; font-size:0.82rem; color:var(--text-muted);">${b.note}</td>
+    <div class="table-responsive" style="border:none;">
+      <table style="width:100%; min-width:420px; border-collapse:collapse; font-size:0.85rem;">
+        <thead>
+          <tr style="background:#f8fafc; border-bottom:2px solid var(--border);">
+            <th style="padding:8px 10px; text-align:left;">項目</th>
+            <th style="padding:8px 10px; text-align:right;">1人概算</th>
+            <th style="padding:8px 10px; text-align:left;">備考</th>
           </tr>
-        `).join('')}
-        <tr style="background:var(--primary-light); font-weight:800; border-top:2px solid var(--primary-border);">
-          <td style="padding:12px; color:var(--primary-dark);">合計（1人あたり）</td>
-          <td style="padding:12px; text-align:right; font-family:'Plus Jakarta Sans', sans-serif; font-size:1.2rem; color:var(--primary-dark);">
-            約 ${total.toLocaleString()} 円
-          </td>
-          <td style="padding:12px; font-size:0.85rem; color:var(--primary-dark);">2人合計: 約 ${(total * 2).toLocaleString()} 円</td>
-        </tr>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          ${TRIP_DATA.budgetBreakdown.map(b => `
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:8px 10px; font-weight:700;">${b.item}</td>
+              <td style="padding:8px 10px; text-align:right; font-family:'Plus Jakarta Sans', sans-serif; font-weight:700;">${b.costPerPerson.toLocaleString()} 円</td>
+              <td style="padding:8px 10px; font-size:0.78rem; color:var(--text-muted);">${b.note}</td>
+            </tr>
+          `).join('')}
+          <tr style="background:var(--primary-light); font-weight:800; border-top:2px solid var(--primary-border);">
+            <td style="padding:10px; color:var(--primary-dark);">合計（1人）</td>
+            <td style="padding:10px; text-align:right; font-family:'Plus Jakarta Sans', sans-serif; font-size:1.05rem; color:var(--primary-dark);">
+              約 ${total.toLocaleString()} 円
+            </td>
+            <td style="padding:10px; font-size:0.8rem; color:var(--primary-dark);">2人計: 約 ${(total * 2).toLocaleString()} 円</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   `;
 }
 
