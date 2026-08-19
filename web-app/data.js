@@ -79,14 +79,14 @@ const TRIP_DATA = {
         {
           day: 1,
           date: "9/11 (金)",
-          title: "青森IN ➔ 縄文世界遺産 ➔ 白神山地・十二湖",
+          title: "青森駅START ➔ 三内丸山 ➔ 白神山地・十二湖",
           distance: "約 130 km",
           driveTime: "約 3 時間",
           stay: "深浦 / 黄金崎不老ふ死温泉 等",
           stayDetail: "日本海の夕日露天風呂・海鮮会席夕食",
-          mapUrl: "https://www.google.com/maps/dir/%E9%9D%92%E6%A3%AE%E7%A9%BA%E6%B8%AF/%E4%B8%89%E5%86%85%E4%B8%B8%E5%B1%B1%E9%81%BA%E8%B7%A1/%E5%8D%83%E7%94%B3%E6%97%B7%E6%B5%B7%E5%B2%B8/%E5%8D%81%E4%BA%8C%E6%B9%96+%E6%A3%AE%E3%81%AE%E7%89%A9%E7%94%A3%E9%A4%A8%E3%82%AD%E3%83%A7%E3%83%AD%E3%83%AD/%E9%BB%84%E9%87%91%E5%B4%8E%E4%B8%8D%E8%80%81%E3%81%B5%E6%AD%BB%E6%B8%89%E6%B3%89",
+          mapUrl: "https://www.google.com/maps/dir/%E9%9D%92%E6%A3%AE%E9%A7%85/%E4%B8%89%E5%86%85%E4%B8%B8%E5%B1%B1%E9%81%BA%E8%B7%A1/%E5%8D%83%E7%94%B3%E6%97%B7%E6%B5%B7%E5%B2%B8/%E5%8D%81%E4%BA%8C%E6%B9%96+%E6%A3%AE%E3%81%AE%E7%89%A9%E7%94%A3%E9%A4%A8%E3%82%AD%E3%83%A7%E3%83%AD%E3%83%AD/%E9%BB%84%E9%87%91%E5%B4%8E%E4%B8%8D%E8%80%81%E3%81%B5%E6%AD%BB%E6%B8%89%E6%B3%89",
           schedule: [
-            { time: "11:30", text: "青森空港 到着・レンタカー貸出手続き・出発" },
+            { time: "11:30", text: "青森駅 到着・レンタカー受取・出発" },
             { time: "12:15〜13:45", text: "特別史跡 三内丸山遺跡（縄文集落・大型掘立柱建物見学 / 約1.5h）" },
             { time: "15:00", text: "千畳敷海岸（奇岩海岸ドライブ）" },
             { time: "15:45〜17:00", text: "白神山地・十二湖（神秘のコバルトブルー青池 ＆ 沸壺の池散策 / 徒歩40分）" },
@@ -151,17 +151,17 @@ const TRIP_DATA = {
         {
           day: 5,
           date: "9/15 (火)",
-          title: "ワ・ラッセ ➔ A-FACTORY ➔ 青森空港 ➔ 帰路",
-          distance: "約 20 km",
+          title: "ワ・ラッセ ➔ A-FACTORY ➔ 青森フェリーターミナルGOAL",
+          distance: "約 15 km",
           driveTime: "約 0.5 時間",
-          stay: "帰路フライト",
-          stayDetail: "青森空港 ➔ 帰宅",
-          mapUrl: "https://www.google.com/maps/dir/%E9%9D%92%E6%A3%AE%E9%A7%85/%E3%81%AD%E3%81%B6%E3%81%9F%E3%81%AE%E5%AE%B6+%E3%83%AF%E3%83%BB%E3%83%A9%E3%83%83%E3%82%BB/A-FACTORY/%E9%9D%92%E6%A3%AE%E7%A9%BA%E6%B8%AF",
+          stay: "フェリー乗船（函館・北海道へ）",
+          stayDetail: "津軽海峡フェリー 青森ターミナル",
+          mapUrl: "https://www.google.com/maps/dir/%E9%9D%92%E6%A3%AE%E9%A7%85/%E3%81%AD%E3%81%B6%E3%81%9F%E3%81%AE%E5%AE%B6+%E3%83%AF%E3%83%BB%E3%83%A9%E3%83%83%E3%82%BB/A-FACTORY/%E6%B4%A5%E8%BB%BD%E6%B5%B7%E5%B3%A1%E3%83%95%E3%82%A7%E3%83%AA%E3%83%BC+%E9%9D%92%E6%A3%AE%E3%83%95%E3%82%A7%E3%83%AA%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB",
           schedule: [
             { time: "09:30", text: "ねぶたの家 ワ・ラッセ（迫力の本物大型ねぶた展示館）" },
             { time: "11:00", text: "A-FACTORY（青森県産アップルパイ・シードル試飲工房・お土産購入）" },
-            { time: "12:30", text: "青森市内 昼食（味噌カレー牛乳ラーメン または のっけ丼）" },
-            { time: "14:00", text: "青森空港 レンタカー返却 ➔ 帰路フライト" }
+            { time: "12:30", text: "青森駅前 昼食（味噌カレー牛乳ラーメン または のっけ丼）" },
+            { time: "14:00", text: "🚢 青森フェリーターミナル（津軽海峡フェリー）到着・乗船手続き" }
           ]
         }
       ]
