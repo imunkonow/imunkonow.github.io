@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
   renderBudgetSection();
   renderChecklist();
   
-  // Default to Route 3 (Crown Recommendation) or Route 1
-  renderRouteSummary('route-3');
-  renderTimeline('route-3');
+  // Default to Route 2 (Finalized Plan)
+  renderRouteSummary('route-2');
+  renderTimeline('route-2');
 });
 
 /**
